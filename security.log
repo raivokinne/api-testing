@@ -1,0 +1,5 @@
+2025-04-15 08:47:47,612 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+

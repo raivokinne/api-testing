@@ -12,7 +12,6 @@ import hashlib
 import time
 import requests
 
-# --- KONFIGURĀCIJA ---
 SECRET_KEY = os.urandom(32)
 ALGORITHM = "HS256"
 
@@ -204,7 +203,6 @@ def test_xss():
     print("[XSS Test] Response:", response.text)
 
 def steal_token():
-    # Šeit simulējam tokena pārtveršanu (piemērs – noder reālajā testēšanā)
     stolen_token = "eyJhbGciOiJIUzI1NiIs..."
     headers = {"Authorization": f"Bearer {stolen_token}"}
     response = requests.get("http://localhost:8000/secure-data", headers=headers)
@@ -230,7 +228,6 @@ def detect_anomalies():
     except Exception as e:
         print(f"Anomaliju detektēšana neizdevās: {str(e)}")
 
-# --- GALVENĀ IZPILDĪŠANA ---
 if __name__ == "__main__":
     print("Sākam pentest uzbrukumus...")
     test_sql_injection()
